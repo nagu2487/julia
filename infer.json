@@ -3,7 +3,7 @@
     "name": "inference"
   },
   "transform": {
-    "image": "dwhitena/julia-infer",
+    "image": "infer_tree:latest",
     "cmd": [ 
 	"julia",
 	"/infer.jl", 
@@ -13,19 +13,18 @@
     ]
   },
   "parallelism_spec": {
-    "strategy": "CONSTANT",
     "constant": "1"
   },
   "input": {
     "cross": [
       {
-        "atom": {
+        "pfs": {
 	  "repo": "attributes",
 	  "glob": "/*"
 	}
       },
       {
-	"atom": {
+	"pfs": {
 	  "repo": "model",
 	  "glob": "/"
 	}

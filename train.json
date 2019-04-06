@@ -3,21 +3,20 @@
     "name": "model"
   },
   "transform": {
-    "image": "dwhitena/julia-train:tree",
+    "image": "train_tree:latest",
     "cmd": [ 
 	"julia", 
 	"/train.jl",
-	"/pfs/training/iris.csv", 
+	"/pfs/train/iris.csv", 
 	"/pfs/out/model.jld"	
     ]
   },
   "parallelism_spec": {
-    "strategy": "CONSTANT",
     "constant": "1"
   },
   "input": {
-    "atom": {
-      "repo": "training",
+    "pfs": {
+      "repo": "train",
       "glob": "/"
     }
   }

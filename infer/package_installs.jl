@@ -5,8 +5,8 @@ metadata_packages = [
     "JLD"]
 
 
-Pkg.init()
-Pkg.update()
+using Pkg
+
 
 for package=metadata_packages
     Pkg.add(package)

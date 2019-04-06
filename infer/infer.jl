@@ -15,7 +15,7 @@ for file in attributes
     df = readtable(p, header = false)
     open(joinpath(ARGS[3], file), "a") do x
       for r in eachrow(df)
-        prediction = DecisionTree.predict(model, convert(Array, r))
+        prediction = DecisionTree.predict(model, float.(convert(Array, r)))
         write(x, string(prediction[1], "\n"))
       end
     end

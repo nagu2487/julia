@@ -4,9 +4,7 @@ metadata_packages = [
     "HDF5",
     "JLD"]
 
-
-Pkg.init()
-Pkg.update()
+using Pkg
 
 for package=metadata_packages
     Pkg.add(package)

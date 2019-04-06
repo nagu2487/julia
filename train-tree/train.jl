@@ -7,10 +7,13 @@ df = readtable(ARGS[1], header = false)
 
 # Get the features and labels.
 features = convert(Array, df[:, 1:4])
+features = float.(features)
+
 labels = convert(Array, df[:, 5])
+labels = string.(labels)
 
 # Train decision tree classifier.
-model = DecisionTreeClassifier(pruning_purity_threshold=0.9, maxdepth=6)
+model = DecisionTreeClassifier(pruning_purity_threshold=0.9)
 DecisionTree.fit!(model, features, labels)
 
 # Save the model.

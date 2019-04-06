@@ -1,5 +1,9 @@
 # Workshop - Integrating Julia in Real-World, Distributed Pipelines
 
+
+# Important Commands.
+eval $(minikube docker-env)
+
 ![alt tag](pipeline.png)
 
 This workshop focuses on building a production scale machine learning pipeline with [Julia](), [Docker](), [Kubernetes](), and [Pachyderm](http://pachyderm.io/).  In particular, this pipeline trains and utilizes a model that predicts the species of iris flowers, based on measurements of those flowers.
