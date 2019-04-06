@@ -2,7 +2,9 @@ metadata_packages = [
     "DataFrames",
     "DecisionTree",
     "HDF5",
-    "JLD"]
+    "JLD",
+    "BSON",
+    "Flux"]
 
 
 using Pkg

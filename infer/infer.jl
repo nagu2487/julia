@@ -1,9 +1,13 @@
 using DataFrames
 using DecisionTree
 using JLD
+using Random
+using Flux
+using BSON: @load
 
 # Load our model.
-model = load(ARGS[1], "model")
+#model = load(ARGS[1], "model")
+@load ARGS[1] model
 
 # Walk over the directory with input attribute files.
 attributes = readdir(ARGS[2])
