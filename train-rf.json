@@ -1,0 +1,23 @@
+{
+  "pipeline": {
+    "name": "model-rf"
+  },
+  "transform": {
+    "image": "train_forest:latest",
+    "cmd": [ 
+	"julia", 
+	"/train.jl",
+	"/pfs/train/iris.csv", 
+	"/pfs/out/model.jld"	
+    ]
+  },
+  "parallelism_spec": {
+    "constant": "1"
+  },
+  "input": {
+    "pfs": {
+      "repo": "train",
+      "glob": "/"
+    }
+  }
+}

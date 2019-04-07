@@ -2,11 +2,11 @@ metadata_packages = [
     "DataFrames",
     "DecisionTree",
     "HDF5",
-    "JLD"]
+    "JLD",
+    "BSON"]
 
 
-Pkg.init()
-Pkg.update()
+using Pkg
 
 for package=metadata_packages
     Pkg.add(package)
